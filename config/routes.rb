@@ -4,5 +4,7 @@ Rails.application.routes.draw do
 
   root to: "pages#home"
 
-  get "ateliers", to: "ateliers#index"
+  get "admin-use-only", to: "pages#logintheadmin"
+
+  resources :ateliers
 end
