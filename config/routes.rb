@@ -4,5 +4,5 @@ Rails.application.routes.draw do
 
   root to: "pages#home"
 
-  get 'logintheadmin', to: "pages#logintheadmin"
+  get "ateliers", to: "ateliers#index"
 end
