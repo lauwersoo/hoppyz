@@ -1,8 +1,11 @@
 <% if user_signed_in? %>
-  Hey <%= current_user.email %> <br>
-  Bienvenue sur ta plateforme Hoppyz
+  <p>Hey <%= current_user.email %></p><br>
+  <p>Bienvenue sur ta plateforme Hoppyz</p><br>
+  <ul>
+    <li><%= link_to  "Créer une nouvelle formation", new_user_formation_path(current_user) %></li>
+    <li><%= link_to  "Créer une nouvelle box", new_user_box_path(current_user) %></li>
+    <li><%= link_to  "Créer un nouvel atelier", new_user_atelier_path(current_user) %></li>
+  </ul>
 
-
-  <br>
   clique ici pour te <%= link_to  "déconnecter", destroy_user_session_path, method: :delete %>
 <% end %>
