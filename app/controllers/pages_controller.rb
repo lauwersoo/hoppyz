@@ -1,9 +1,15 @@
 class PagesController < ApplicationController
+  before_action :authenticate_user!, only: :login_the_admin
 
   def home
   end
 
-  def logintheadmin
+  private
+
+  def login_the_admin
+  end
+
+  def restricted_area
   end
 
 end

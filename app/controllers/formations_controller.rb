@@ -1,4 +1,6 @@
 class FormationsController < ApplicationController
+    # before_action :authenticate_user!
+    before_action :allow_only_admin
 
   def index
     @formations = Formation.all
@@ -38,6 +40,12 @@ class FormationsController < ApplicationController
     @formation = Formation.find(params[:id])
     @formation.destroy
     redirect_to root_path
+  end
+
+  def allow_only_admin
+    unless current_user
+      redirect_to restricted_url_path
+    end
   end
 
   private

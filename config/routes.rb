@@ -4,7 +4,9 @@ Rails.application.routes.draw do
 
   root to: "pages#home"
 
-  get "admin-use-only", to: "pages#logintheadmin"
+  get "admin-use-only", to: "pages#login_the_admin"
+
+  get "restricted-url", to: "pages#restricted_area"
 
   resources :users, only: [:show] do
 
@@ -21,6 +23,5 @@ Rails.application.routes.draw do
   resources :boxs, only: [:show, :index]
 
   resources :formations, only: [:show, :index]
-
 
 end
