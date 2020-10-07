@@ -1,5 +1,8 @@
 <% if user_signed_in? %>
-  Hey, Bienvenue sur ta plateforme Hoppyz
+  Hey <%= current_user.email %> <br>
+  Bienvenue sur ta plateforme Hoppyz
+
+
   <br>
   clique ici pour te <%= link_to  "déconnecter", destroy_user_session_path, method: :delete %>
 <% end %>
