@@ -5,6 +5,9 @@ ruby '2.6.5'
 
 # Ajouté par Yann Lauwers
 gem 'devise'
+gem 'simple_form'
+gem 'sassc-rails'
+gem 'bootstrap', '~> 4.5.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.3'
