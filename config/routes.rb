@@ -4,13 +4,11 @@ Rails.application.routes.draw do
 
   root to: "pages#home"
 
-  get "admin-use-only", to: "pages#login_the_admin"
-
-  get "admin-root", to: "pages#admin_home"
+  get "admin-platform", to: "pages#admin_platform"
 
   get "restricted-url", to: "pages#restricted_area"
 
-  resources :users, only: [:show] do
+  resources :users do
 
     resources :ateliers
 

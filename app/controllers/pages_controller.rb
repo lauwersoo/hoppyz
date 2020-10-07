@@ -1,19 +1,12 @@
 class PagesController < ApplicationController
-  before_action :authenticate_user!, only: :login_the_admin
+  before_action :authenticate_user!, only: :admin_platform
 
   def home
   end
 
-  def admin_home
-
-  end
-
   private
 
-  def login_the_admin
-    if current_user.is_connected?
-      redirect_to admin_root_path
-    end
+  def admin_platform
   end
 
   def restricted_area
