@@ -1,6 +1,6 @@
 class FormationsController < ApplicationController
-    # before_action :authenticate_user!
-    before_action :allow_only_admin
+
+  before_action :allow_only_admin
 
   def index
     @formations = Formation.all
@@ -30,7 +30,7 @@ class FormationsController < ApplicationController
   def update
     @formation = Formation.find(params[:id])
     if @formation.update(formation_params)
-      redirect_to root_path(@formation)
+      redirect_to root_path
     else
       render :edit
     end
@@ -42,13 +42,13 @@ class FormationsController < ApplicationController
     redirect_to root_path
   end
 
+  private
+
   def allow_only_admin
     unless current_user
       redirect_to restricted_url_path
     end
   end
-
-  private
 
   def formation_params
     params.require(:formation).permit(:title, :description, :price)
