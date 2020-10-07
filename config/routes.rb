@@ -6,5 +6,21 @@ Rails.application.routes.draw do
 
   get "admin-use-only", to: "pages#logintheadmin"
 
-  resources :ateliers
+  resources :users, only: [:show] do
+
+    resources :ateliers
+
+    resources :boxs
+
+    resources :formations
+
+  end
+
+  resources :ateliers, only: [:show, :index]
+
+  resources :boxs, only: [:show, :index]
+
+  resources :formations, only: [:show, :index]
+
+
 end
