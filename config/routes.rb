@@ -22,6 +22,6 @@ Rails.application.routes.draw do
 
   resources :boxs, only: [:show, :index]
 
-  resources :formations, only: [:show, :index]
+  resources :formations
 
 end

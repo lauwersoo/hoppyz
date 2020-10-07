@@ -16,8 +16,8 @@ class FormationsController < ApplicationController
 
   def create
     @formation = Formation.new(formation_params)
-    if @formation.valid?
-      @formation.save
+    if @formation.save
+      redirect_to admin_root_path
     else
       render :new
     end

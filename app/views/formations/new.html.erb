@@ -1,0 +1,14 @@
+<p>Connecté en tant que <%= current_user.email %></p>
+
+<h1>Crée une formation ici :</h1>
+
+<div class="form">
+  <%= simple_form_for [@user, @formation] do |f| %>
+    <%= f.error_notification %>
+    <%= f.input :title, label: 'Titre de la formation', error: 'Un titre est boligatoire afin de créer la formation' %>
+    <%= f.input :price, label: 'Prix de la formation', error: 'Un prix est boligatoire afin de créer la formation' %>
+    <%= f.input :description, label: 'Description de la formation', error: 'Une description est boligatoire afin de créer la formation' %>
+    <%= f.button :submit, 'Créer' %>
+  <% end %>
+</div>
+
