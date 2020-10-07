@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   get "admin-use-only", to: "pages#login_the_admin"
 
+  get "admin-root", to: "pages#admin_home"
+
   get "restricted-url", to: "pages#restricted_area"
 
   resources :users, only: [:show] do
