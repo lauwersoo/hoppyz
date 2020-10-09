@@ -1,11 +1,20 @@
 <% if user_signed_in? %>
-  <p>Hey <%= current_user.email %></p><br>
-  <p>Bienvenue sur ta plateforme Hoppyz</p><br>
+  <p>Hey <%= current_user.email %></p>
+  <p>Bienvenue sur ta plateforme Hoppyz</p>
+  <h2>Créer c'est par ici :</h2>
   <ul>
-    <li><%= link_to  "Créer une nouvelle formation", new_user_formation_path(current_user) %></li>
-    <li><%= link_to  "Créer une nouvelle box", new_user_box_path(current_user) %></li>
-    <li><%= link_to  "Créer un nouvel atelier", new_user_atelier_path(current_user) %></li>
+    <li><%= link_to  "Créer une nouvelle formation", new_formation_path %></li>
+    <li><%= link_to  "Créer une nouvelle box", new_box_path %></li>
+    <li><%= link_to  "Créer un nouvel atelier", new_atelier_path %></li>
+  </ul>
+  <br>
+  <h2>Voir c'est par là :</h2>
+  <ul>
+    <li><%= link_to  "Mes formations", formations_path %></li>
+    <li><%= link_to  "Mes boxes", boxes_path %></li>
+    <li><%= link_to  "Mes ateliers", ateliers_path %></li>
   </ul>
 
   clique ici pour te <%= link_to  "déconnecter", destroy_user_session_path, method: :delete %>
 <% end %>
+

@@ -15,16 +15,19 @@ class FormationsController < ApplicationController
   end
 
   def create
+    @user = current_user
     @formation = Formation.new(formation_params)
+    @formation.user = @user
     if @formation.save
-      redirect_to admin_root_path
+      @formation.save
+      redirect_to formations_path
     else
       render :new
     end
   end
 
   def edit
-    @formation = Foramtion.find(params[:id])
+    @formation = Formation.find(params[:id])
   end
 
   def update
@@ -39,7 +42,7 @@ class FormationsController < ApplicationController
   def destroy
     @formation = Formation.find(params[:id])
     @formation.destroy
-    redirect_to root_path
+    redirect_to formations_path
   end
 
   private
@@ -55,3 +58,5 @@ class FormationsController < ApplicationController
   end
 
 end
+
+
