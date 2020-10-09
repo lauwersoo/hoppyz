@@ -1,15 +1,10 @@
 // Specific CSS for your home-page
 .landing-page {
     .imgbox {
-        // display: grid;
         height: 100%;
     }
     .landing-picture {
         object-fit: cover;
-        // max-height: 100vh;
-        // max-width: 100%;
-        // margin: auto;
-        // z-index: -100;
         /* Set rules to fill background */
         min-height: 100%;
         max-width: 640px;
@@ -43,10 +38,6 @@
         transform: translate(-50%, -50%);
         text-align: center;
     }
-    // .arrow {
-    //     text-align: center;
-    //     margin: 8% 0;
-    // }
     .arrow-down {
         width: 20px;
         transform: translate(-50%, 0) !important;
@@ -55,7 +46,6 @@
         position: absolute;
         top: 90%;
         left: 50%;
-        // transform: translate(-50%, 0) !important;
     }
     .bounce {
         -moz-animation: bounce 2s infinite;
