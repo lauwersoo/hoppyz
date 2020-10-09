@@ -1,0 +1,15 @@
+<p>Connecté en tant que <%= current_user.email %></p>
+
+<h1>Crée un atelier ici :</h1>
+
+<div class="form">
+  <%= simple_form_for [@user, @atelier] do |f| %>
+    <%= f.error_notification %>
+    <%= f.input :title, label: "Titre de l'atelier", error: "Un titre est obligatoire afin de créer l'atelier" %>
+    <%= f.input :price, label: "Prix de l'atelier", error: "Un prix est obligatoire afin de créer l'atelier" %>
+    <%= f.input :description, label: "Description de l'atelier", error: "Une description est obligatoire afin de créer l'atelier" %>
+    <%= f.button :submit, 'Créer' %>
+  <% end %>
+</div>
+
+<%= link_to  "cancel", admin_platform_path %>
