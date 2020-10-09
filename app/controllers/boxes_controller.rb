@@ -15,9 +15,12 @@ class BoxesController < ApplicationController
   end
 
   def create
-    @box = Box.new
-    if @box.valid?
+    @user = current_user
+    @box = Box.new(box_params)
+    @box.user = @user
+    if @box.save
       @box.save
+      redirect_to boxes_path
     else
       render :new
     end
@@ -39,7 +42,7 @@ class BoxesController < ApplicationController
   def destroy
    @box = Box.find(params[:id])
    @box.destroy
-   redirect_to root_path
+   redirect_to boxes_path
   end
 
   private

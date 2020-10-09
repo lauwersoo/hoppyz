@@ -15,9 +15,12 @@ class AteliersController < ApplicationController
   end
 
   def create
+    @user = current_user
     @atelier = Atelier.new(atelier_params)
-    if @atelier.valid?
+    @atelier.user = @user
+    if @atelier.save
       @atelier.save
+      redirect_to ateliers_path
     end
   end
 
@@ -37,7 +40,7 @@ class AteliersController < ApplicationController
   def destroy
     @atelier = Atelier.find(params[:id])
     @atelier.destroy
-    redirect_to root_path
+    redirect_to ateliers_path
   end
 
   private
