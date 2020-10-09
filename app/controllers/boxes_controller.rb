@@ -1,9 +1,9 @@
-class BoxsController < ApplicationController
+class BoxesController < ApplicationController
 
   before_action :allow_only_admin
 
   def index
-    @boxs = Box.all
+    @boxes = Box.all
   end
 
   def show

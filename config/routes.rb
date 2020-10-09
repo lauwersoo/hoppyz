@@ -8,19 +8,11 @@ Rails.application.routes.draw do
 
   get "restricted-url", to: "pages#restricted_area"
 
-  resources :users do
+  resources :users
 
-    resources :ateliers
+  resources :ateliers
 
-    resources :boxs
-
-    resources :formations
-
-  end
-
-  resources :ateliers, only: [:show, :index]
-
-  resources :boxs, only: [:show, :index]
+  resources :boxes
 
   resources :formations
 
