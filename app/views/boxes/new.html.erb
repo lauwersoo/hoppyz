@@ -1,0 +1,15 @@
+<p>Connecté en tant que <%= current_user.email %></p>
+
+<h1>Crée une box ici :</h1>
+
+<div class="form">
+  <%= simple_form_for [@user, @box] do |f| %>
+    <%= f.error_notification %>
+    <%= f.input :title, label: 'Titre de la box', error: 'Un titre est obligatoire afin de créer la box' %>
+    <%= f.input :price, label: 'Prix de la box', error: 'Un prix est obligatoire afin de créer la box' %>
+    <%= f.input :description, label: 'Description de la box', error: 'Une description est obligatoire afin de créer la box' %>
+    <%= f.button :submit, 'Créer' %>
+  <% end %>
+</div>
+
+<%= link_to  "cancel", admin_platform_path %>
