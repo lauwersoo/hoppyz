@@ -1,1 +1,20 @@
-boxs
+<h1>Mes Boxs</h1>
+
+<% if @boxes.count == 0 %>
+  <p>Il n'y a pas de box</p>
+<% else %>
+  <% @boxes.each do |f| %>
+    <ul>
+      <li><p>Titre : <%= f.title %></p></li>
+      <p>Prix : <%= f.price %> €</p>
+      <p>Description : <%= f.description %></p>
+      <p><%= link_to  "supprimer définitivement", box_path(f), method: :delete %> - Retirer du site</p>
+
+    </ul>
+  <% end %>
+<% end %>
+
+
+<br>
+
+<%= link_to  "menu", admin_platform_path %>
