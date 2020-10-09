@@ -43,16 +43,19 @@
         transform: translate(-50%, -50%);
         text-align: center;
     }
+    // .arrow {
+    //     text-align: center;
+    //     margin: 8% 0;
+    // }
     .arrow-down {
-        position: absolute;
-        width: 30px;
-        top: 90%;
-        left: 50%;
-        transform: translate(-50%, 0);
+        width: 20px;
+        transform: translate(-50%, 0) !important;
     }
     .arrow {
-        text-align: center;
-        margin: 8% 0;
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        // transform: translate(-50%, 0) !important;
     }
     .bounce {
         -moz-animation: bounce 2s infinite;
