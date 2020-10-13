@@ -1,11 +1,50 @@
 h1 {
     font-size: 32px !important;
+    margin: 0;
 }
 
-h3 {
+h2 {
     font-size: 28px !important;
+    margin: 0;
+}
+
+@media all and (min-width: 350px) {
+    h2 {
+        font-size: 32px !important;
+    }
 }
 
 h3 {
     font-size: 24px !important;
+    margin: 0;
+}
+
+@media all and (min-width: 350px) {
+    h3 {
+        font-size: 26px !important;
+        margin: 0;
+    }
+}
+
+@media all and (min-width: 400px) {
+    h3 {
+        font-size: 27px !important;
+        margin: 0;
+    }
+}
+
+li {
+    font-size: 22px !important;
+}
+
+@media all and (min-width: 350px) {
+    li {
+        font-size: 24px !important;
+    }
+}
+
+@media all and (min-width: 400px) {
+    li {
+        font-size: 25px !important;
+    }
 }
