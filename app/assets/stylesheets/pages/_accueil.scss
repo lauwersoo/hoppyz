@@ -1,0 +1,21 @@
+.accueil {
+    height: 100vh !important;
+    min-height: 100%;
+    text-align: center;
+    .navigation-title {
+        background-color: #677544;
+        opacity: 0.9;
+        height: 90px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #FFFAFA;
+    }
+    .suitcase-icon {
+        width: 75px;
+    }
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+}
