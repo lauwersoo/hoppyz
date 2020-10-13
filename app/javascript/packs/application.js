@@ -19,3 +19,9 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+import { backToTop } from "./back_to_top"
+
+// if (document.querySelector(".back-to-top-anchor")) {
+backToTop();
+// }
