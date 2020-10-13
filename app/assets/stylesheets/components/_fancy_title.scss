@@ -1,0 +1,32 @@
+.navigation-title {
+    background-color: #677544;
+    opacity: 0.9;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFAFA;
+    margin: 0;
+}
+
+.fancy {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.fancy:before,
+.fancy:after {
+    content: '';
+    border-top: 2px solid;
+    padding: 2px 0;
+    border-bottom: 2px solid;
+    margin: 0 20px 0 0;
+    flex: 1 0 20px;
+}
+
+.fancy:after {
+    margin: 0 0 0 20px;
+}

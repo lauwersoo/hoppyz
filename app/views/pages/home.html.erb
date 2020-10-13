@@ -1,12 +1,90 @@
-<div class="landing-page">
-  <div class="imgbox">
-    <%= image_tag 'houblon.jpg', :class => 'landing-picture' %>
-    <div class="landing-text">
-      <h1>HOPPYZ</h1>
-      <h2>Les rencontres de la bière</h2>
+<div id="background-color">
+  <div class="landing-page">
+    <div class="imgbox">
+      <%= image_tag 'houblon.jpg', :class => 'landing-picture' %>
+      <div class="landing-text">
+        <h1>HOPPYZ</h1>
+        <h3>Les rencontres de la bière</h3>
+      </div>
+      <div class="arrow bounce">
+        <%= image_tag 'arrow-down.png', :class => 'arrow-down' %>
+      </div>
     </div>
-    <div class="arrow bounce">
-      <%= image_tag 'arrow-down.png', :class => 'arrow-down' %>
+  </div>
+
+  <div id="pages">
+
+    <div id="accueil" class="set-height">
+      <h2 class="navigation-title fancy">ACCUEIL</h2>
+      <div class="text-top">
+        <div class="text-top-inside">
+          <h3>Apprendre avec le goût</h3>
+          <%= image_tag 'suitcase.png', :class => 'suitcase-icon' %>
+        </div>
+      </div>
+      <div class="background-text-bottom">
+        <%= image_tag 'Rectangle-left.png', :class => 'background-text-bottom-left' %>
+        <%= image_tag 'Rectangle-right.png', :class => 'background-text-bottom-right' %>
+      </div>
+      <div class="text-bottom">
+        <ul class="text-bottom-inside">
+          <li>Voyages gustatifs</li>
+          <li>Rencontres</li>
+          <li>Plaisirs</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="back-to-top-anchor">
+      <a href="#landing-page"><%= image_tag 'arrow-up.png', :class => 'arrow-up' %></a>
+    </div>
+
+    <div id="particuliers" class="set-height">
+      <h2 class="navigation-title fancy">PARTICULIERS</h2>
+      <div class="background-text-bottom">
+        <%= image_tag 'Rectangle-left.png', :class => 'background-text-bottom-left' %>
+        <%= image_tag 'Rectangle-right.png', :class => 'background-text-bottom-right' %>
+      </div>
+    </div>
+
+    <div id="groupes" class="set-height">
+      <h2 class="navigation-title fancy">GROUPES</h2>
+      <div class="background-text-bottom">
+        <%= image_tag 'Rectangle-left.png', :class => 'background-text-bottom-left' %>
+        <%= image_tag 'Rectangle-right.png', :class => 'background-text-bottom-right' %>
+      </div>
+    </div>
+
+    <div id="brasseurs" class="set-height">
+      <h2 class="navigation-title fancy">BRASSEURS</h2>
+      <div class="background-text-bottom">
+        <%= image_tag 'Rectangle-left.png', :class => 'background-text-bottom-left' %>
+        <%= image_tag 'Rectangle-right.png', :class => 'background-text-bottom-right' %>
+      </div>
+    </div>
+
+    <div id="restaurateurs" class="set-height">
+      <h2 class="navigation-title fancy">RESTAURATEURS</h2>
+      <div class="background-text-bottom">
+        <%= image_tag 'Rectangle-left.png', :class => 'background-text-bottom-left' %>
+        <%= image_tag 'Rectangle-right.png', :class => 'background-text-bottom-right' %>
+      </div>
+    </div>
+
+    <div id="agenda" class="set-height">
+      <h2 class="navigation-title fancy">AGENDA</h2>
+      <div class="background-text-bottom">
+        <%= image_tag 'Rectangle-left.png', :class => 'background-text-bottom-left' %>
+        <%= image_tag 'Rectangle-right.png', :class => 'background-text-bottom-right' %>
+      </div>
+    </div>
+
+    <div id="contact" class="set-height">
+      <h2 class="navigation-title fancy">CONTACT</h2>
+      <div class="background-text-bottom">
+        <%= image_tag 'Rectangle-left.png', :class => 'background-text-bottom-left' %>
+        <%= image_tag 'Rectangle-right.png', :class => 'background-text-bottom-right' %>
+      </div>
     </div>
   </div>
 </div>

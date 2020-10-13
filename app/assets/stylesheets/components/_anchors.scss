@@ -1,0 +1,14 @@
+#back-to-top-anchor {
+    z-index: 1000;
+    position: sticky;
+    position: -webkit-sticky;
+    background: transparent;
+    top: 100%;
+    .arrow-up {
+        position: absolute;
+        right: 7%;
+        bottom: 30px;
+        width: 15px;
+        margin: 15px;
+    }
+}
