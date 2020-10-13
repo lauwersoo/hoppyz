@@ -1,17 +1,19 @@
 #back-to-top-anchor {
-    z-index: 1000;
     position: sticky;
     position: -webkit-sticky;
     background: transparent;
     top: 100%;
+    z-index: 10;
     .arrow-up {
         position: absolute;
-        right: 7%;
+        right: 5%;
         bottom: 30px;
-        width: 15px;
+        width: 30px;
+        border: 1px solid #677544;
+        border-radius: 50%;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        padding: 5px;
         margin: 15px;
     }
 }
-
-// <a href="#landing-page"><%=image_tag 'arrow-up.png',
-//  :class=>'arrow-up' %></a>

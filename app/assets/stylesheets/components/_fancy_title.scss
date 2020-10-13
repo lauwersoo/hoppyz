@@ -1,15 +1,17 @@
 .navigation-title {
     background-color: #677544;
-    opacity: 0.9;
+    // opacity: 0.9;
     height: 90px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #FFFAFA;
     margin: 0;
+    z-index: 15 !important;
 }
 
 .fancy {
+    z-index: 15 !important;
     display: flex;
     width: 100%;
     justify-content: center;
@@ -19,6 +21,7 @@
 
 .fancy:before,
 .fancy:after {
+    z-index: 15 !important;
     content: '';
     border-top: 2px solid;
     padding: 2px 0;
@@ -28,5 +31,6 @@
 }
 
 .fancy:after {
+    z-index: 15 !important;
     margin: 0 0 0 20px;
 }
