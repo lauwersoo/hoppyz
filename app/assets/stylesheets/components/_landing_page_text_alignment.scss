@@ -5,6 +5,13 @@
     position: relative;
 }
 
+.adapt-height-to-content {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 .text-top {
     height: calc(50% - 90px);
     position: absolute;

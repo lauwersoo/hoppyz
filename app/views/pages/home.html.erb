@@ -39,7 +39,7 @@
       <%= image_tag 'arrow-up.png', :class => 'arrow-up' %>
     </div>
 
-    <div id="particuliers" class="set-height">
+    <div id="particuliers" class="adapt-height-to-content">
       <h2 class="navigation-title fancy">PARTICULIERS</h2>
       <div class="background-text-bottom">
         <%= image_tag 'Rectangle-left.png', :class => 'background-text-bottom-left' %>
@@ -49,51 +49,51 @@
 
         <div class="one">
           <div class="particulier-grid-img">
-            img
+            <%= image_tag 'beer-and-food.png' %>
           </div>
-          <div>
+          <div class="particulier-grid-content">
             <div>
               <h4>ATELIERS BIERES & METS</h4>
             </div>
             <div>
-              <p>Des jeux de saveurs pour éveiller vos sens. (chocolat, fromage, charcuterie, dessert...)</p>
+              <p>Des jeux de saveurs pour éveiller vos sens (chocolat, fromage, charcuterie, dessert...).</p>
             </div>
-            <div>
-              <p class="more-infos"><%= link_to  "En savoir plus", ateliers_path %></p>
+            <div class="learn-more-div">
+              <%= link_to  "En savoir plus", ateliers_path, :class => 'learn-more' %>
             </div>
           </div>
         </div>
 
         <div class="two">
-          <div>
+          <div class="particulier-grid-content">
             <div>
               <h4>ATELIERS FOCUS BIERES</h4>
             </div>
             <div>
-              <p>Des jeux de saveurs pour éveiller vos sens. (chocolat, fromage, charcuterie, dessert...)</p>
+              <p>6 dégustations et 1 dégustation à l'aveugle.</p>
             </div>
-            <div>
-              <p class="more-infos"><%= link_to  "En savoir plus", ateliers_path %></p>
+            <div class="learn-more-div">
+              <%= link_to  "En savoir plus", ateliers_path, :class => 'learn-more' %>
             </div>
           </div>
           <div class="particulier-grid-img">
-            img
+            <%= image_tag 'beer-and-beer.png' %>
           </div>
         </div>
 
         <div class="three">
           <div class="particulier-grid-img">
-            img
+            <%= image_tag 'presentation.png' %>
           </div>
-          <div>
+          <div class="particulier-grid-content">
             <div>
               <h4>CYCLES FORMATION</h4>
             </div>
             <div>
-              <p>Des jeux de saveurs pour éveiller vos sens. (chocolat, fromage, charcuterie, dessert...)</p>
+              <p>Des ateliers théoriques agrémentés de dégustations pour tout vous expliquer de la fabrication à la dégustation </p>
             </div>
-            <div>
-              <p class="more-infos"><%= link_to  "En savoir plus", formations_path %></p>
+            <div class="learn-more-div">
+              <%= link_to  "En savoir plus", formations_path, :class => 'learn-more'%>
             </div>
           </div>
         </div>
