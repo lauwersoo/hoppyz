@@ -8,6 +8,7 @@
     border-top: 2px solid transparent;
     overflow: hidden;
     outline: none;
+    opacity: 0.4;
     // z-index: 1;
 }
 
@@ -47,7 +48,7 @@
     border-bottom-right-radius: 30px;
     border-bottom-left-radius: 30px;
     background-size: 100% 100%;
-    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1526092/beer.png);
+    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1526092/beer.png');
     /*mueve el agua detras de la imagen del tarro  */
 }
 
@@ -69,7 +70,7 @@
     background-size: 100% auto;
     background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1526092/bubbles.png');
     background-repeat: repeat-y;
-    -webkit-mask-image: linear-gradient(to top, transparent 5%, black 100%);
+    // -webkit-mask-image: linear-gradient(to top, transparent 5%, black 100%);
     animation-name: bubbly;
     animation-duration: 3s;
     animation-timing-function: linear;
@@ -78,7 +79,7 @@
 
 .beer .bubbles .layer.more {
     transform: rotate(180deg);
-    -webkit-mask-image: linear-gradient(to bottom, transparent 40%, black 100%);
+    // -webkit-mask-image: linear-gradient(to bottom, transparent 40%, black 100%);
     animation-direction: reverse;
     animation-duration: 3.5s;
     opacity: 0.65;
