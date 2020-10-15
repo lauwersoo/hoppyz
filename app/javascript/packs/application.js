@@ -21,7 +21,9 @@ require("channels")
 // const imagePath = (name) => images(name, true)
 
 import { backToTop } from "./back_to_top"
+import { beerScrolling } from "./beer_scrolling"
 
 // if (document.querySelector(".back-to-top-anchor")) {
 backToTop();
 // }
+beerScrolling();

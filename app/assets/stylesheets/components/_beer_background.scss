@@ -1,0 +1,199 @@
+.cup {
+    position: fixed;
+    top: 150vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: auto;
+    border-top: 2px solid transparent;
+    overflow: hidden;
+    outline: none;
+    // z-index: 1;
+}
+
+.cup svg {
+    position: relative;
+    z-index: 1;
+    display: block;
+    transform: translateZ(100vmin);
+}
+
+.cup .wrapper {
+    position: absolute;
+    left: 10.5%;
+    right: 10.5%;
+    top: 5%;
+    bottom: -15%;
+    transform: perspective(96vmin) rotateX(-30.8deg);
+}
+
+.cup .contents {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 0 0 25% 25% / 0 0 10% 10%;
+    overflow: hidden;
+}
+
+.beer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* reducir el ancho del agua*/
+    height: 115%;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    background-size: 100% 100%;
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1526092/beer.png);
+    /*mueve el agua detras de la imagen del tarro  */
+}
+
+.beer .bubbles {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.beer .bubbles .layer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10%;
+    height: 90%;
+    background-size: 100% auto;
+    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1526092/bubbles.png');
+    background-repeat: repeat-y;
+    -webkit-mask-image: linear-gradient(to top, transparent 5%, black 100%);
+    animation-name: bubbly;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.beer .bubbles .layer.more {
+    transform: rotate(180deg);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 40%, black 100%);
+    animation-direction: reverse;
+    animation-duration: 3.5s;
+    opacity: 0.65;
+}
+
+@keyframes bubbly {
+    from {
+        background-position-y: 100%
+    }
+}
+
+@keyframes animate {
+    0% {
+        background-position-y: 0;
+    }
+    100% {
+        background-position-y: 150%;
+    }
+}
+
+.cup .surface {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100%;
+    // transform: scale(0);
+    opacity: 1;
+    animation-name: surface;
+}
+
+.cup .surface::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding-bottom: 15%;
+    margin-top: -5%;
+    border-radius: 50%;
+    background: #000;
+    opacity: 0.35;
+}
+
+.cup .surface::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding-bottom: 15%;
+    margin-top: -7.5%;
+    border-radius: 50%;
+    background: #d39909;
+}
+
+@keyframes surface {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    10%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.cup .head {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    bottom: 100%;
+    padding-bottom: 0%;
+    opacity: 0;
+    animation-name: fill-head;
+    background: linear-gradient(to right, rgba(178, 178, 178, 1) 0%, rgba(235, 235, 235, 1) 50%, rgba(178, 178, 178, 1) 100%);
+}
+
+.cup .head::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-bottom: 15%;
+    border-radius: 50%;
+    margin-bottom: -7.5%;
+    background: linear-gradient(to right, rgba(178, 178, 178, 1) 0%, rgba(235, 235, 235, 1) 50%, rgba(178, 178, 178, 1) 100%);
+}
+
+.cup .head::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding-bottom: 15%;
+    margin-top: -7.5%;
+    border-radius: 50%;
+    background: #f4f4f4;
+}
+
+@keyframes fill-head {
+    0% {
+        padding-bottom: 0%;
+        opacity: 0;
+    }
+    35% {
+        padding-bottom: 0%;
+        opacity: 0;
+    }
+    45% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        padding-bottom: 20.5%;
+    }
+}
