@@ -14,12 +14,12 @@ body {
     padding: 0;
     /* make it look decent enough */
     background: #232323;
-    color: #FFFAFA;
+    color: #FFFFFF;
     font-family: "Avenir Next", "Avenir", sans-serif;
 }
 
 #landing-page {
-    height: 100vh;
+    height: 107%;
 }
 
 #menuToggle {
@@ -124,12 +124,12 @@ body {
 #menu {
     position: absolute;
     text-align: center;
-    height: calc(100vh + 23px);
+    height: 150vh;
     width: 100vw;
     margin: -100px 0 0 -50px;
     padding: 50px;
     padding-top: 125px;
-    background: #FFFAFA;
+    background: #FFFFFF;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
     /* to stop flickering of text in safari */
@@ -138,15 +138,6 @@ body {
     transition: transform 0.3s cubic-bezier(0.77, 0.2, 0.05, 1.0);
 }
 
-// #menu li {
-//     padding: 14px 0;
-//     font-size: 22px;
-// }
-// @media all and (min-height: 650px) {
-//     #menu li {
-//         padding: 20px 0;
-//     }
-// }
 #menu li {
     padding: 14px 0;
     @media all and (min-height: 660px) {
