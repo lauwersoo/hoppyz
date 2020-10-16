@@ -1,6 +1,9 @@
 import "core-js/stable";
 import "regenerator-runtime/runtime";
 import "bootstrap";
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+// ..
 
 // This file is automatically compiled by Webpack, along with any other files
 // present in this directory. You're encouraged to place your actual application logic in
@@ -27,3 +30,7 @@ import { beerScrolling } from "./beer_scrolling"
 backToTop();
 // }
 beerScrolling();
+
+
+// javascript on scroll animations
+AOS.init();
