@@ -2,3 +2,14 @@
     text-align: center;
     margin: 0;
 }
+
+.border-only-alignment {
+    display: flex;
+    justify-content: center;
+    .border-only {
+        border-left: 1px solid #999C57;
+        height: 40px;
+        width: 1px;
+        text-align: center;
+    }
+}

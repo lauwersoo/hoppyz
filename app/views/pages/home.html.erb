@@ -24,7 +24,7 @@
     <div class="container">
       <div class="empty-container"></div>
       <%= image_tag 'accueil1.jpg', :class => 'image1-accueil'%>
-      <div class="container-1" data-aos="fade-up" data-aos-duration="1500">>
+      <div class="container-1" data-aos="fade-up" data-aos-duration="1500">
         <h3 class="subtitle">Apprendre avec le goût</h3>
         <p class="accueil-description">HOPPYZ vous fera découvrir le fabuleux monde de la bière à travers des ateliers de dégustations accompagnés de succulents mets ainsi que des formations.</p>
         <div class="accueil-atouts">
@@ -41,9 +41,40 @@
   </div>
 
   <div id="particuliers" class="adapt-height-to-content">
-      <h2 class="navigation-title">Particuliers</h2>
+    <h2 class="navigation-title">Particuliers</h2>
+    <div class="border-only-alignment">
+      <div class="border-only"></div>
+    </div>
+    <div class="container-left" data-aos="fade-right">
+      <h3 class="subtitle">ATELIERS BIERES & METS</h3>
+      <p>Des jeux de saveurs pour éveiller vos sens (chocolat, fromage, charcuteries ...)</p>
+      <%= link_to  "Learn more", ateliers_path, :class => 'learn-more'%>
+    </div>
+    <div class="container-right" data-aos="fade-right">
+      <h3 class="subtitle">ATELIERS FOCUS BIERES</h3>
+      <p>6 dégustations<br>1 dégustation à l'aveugle</p>
+      <%= link_to  "Learn more", ateliers_path, :class => 'learn-more' %>
+    </div>
+    <div class="container-left" data-aos="fade-right">
+      <h3 class="subtitle">CYCLES FORMATION</h3>
+      <p>De la fabrication à la dégustation, HOPPYZ vous expliquera tout à travers des ateliers théoriques agrémentés de dégustations</p>
+      <%= link_to  "Learn more", ateliers_path, :class => 'learn-more' %>
+    </div>
   </div>
 
+  <div id="groupes" class="adapt-height-to-content">
+    <h2 class="navigation-title">Groupes</h2>
+    <div class="border-only-alignment">
+      <div class="border-only"></div>
+    </div>
+    <div class="container">
+      <h3 class="subtitle">ATELIERS A LA DEMANDE</h3>
+      <p>Atelier dégustation (35€/p)</p>
+      <p>Atelier bière & mets (45€/p)</p>
+      <p>Menu bière & mets (65€/p)</p>
+      <%= link_to  "More details", ateliers_path, :class => 'learn-more' %>
+    </div>
+  </div>
 
 
 
