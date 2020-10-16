@@ -17,33 +17,19 @@
             margin: 0;
             text-align: center;
             width: 100%;
-            background-color: #999C57;
+            background-color: rgba(153, 156, 87, 0.6);
             color: #232323;
-            border: 1px solid #999C57;
-        }
-        .rest-title-nav2,
-        .rest-title-nav3 {
-            border-top: 1px solid #ffffff;
         }
         .rest-title-nav1::after,
         .rest-title-nav2::after,
         .rest-title-nav3::after {
-            // display: none;
             position: absolute;
             content: url('triangle-down.png');
             top: 81%;
             left: 50%;
             transform: translate(-50%, 0);
+            opacity: 0.6;
         }
-        // .restaurateur-content-nav-1 {
-        //     display: none;
-        // }
-        // .restaurateur-content-nav-2 {
-        //     display: none;
-        // }
-        // .restaurateur-content-nav-3 {
-        //     display: none;
-        // }
         div>div>p {
             text-align: center;
             margin: 0;
