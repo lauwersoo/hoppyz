@@ -76,6 +76,93 @@
     </div>
   </div>
 
+  <div id="brasseurs" class="adapt-height-to-content">
+    <h2 class="navigation-title">Brasseurs</h2>
+    <div class="border-only-alignment">
+      <div class="border-only"></div>
+    </div>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <%# <h5 class="caption-sentence">Animation d'ateliers</h5> %>
+          <%= image_tag 'Rectangle-left.png', :class => 'carrousel-picture' %>
+          <div class="caption-sentence">
+            <h5>Animation d'ateliers</h5>
+            <p>Mettez en valeur vos bières</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <%= image_tag 'Rectangle-right.png', :class => 'carrousel-picture' %>
+          <div class="caption-sentence">
+            <h5>Fiches descriptives</h5>
+            <p>HOPPYZ réalise la carte d'identité de vos bières</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <%= image_tag 'Rectangle-left.png', :class => 'carrousel-picture' %>
+          <div class="caption-sentence">
+            <h5>Formation du personnel</h5>
+            <p>Apprenez à servir et à présenter vos bières</p>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+
+  <div id="restaurateurs" class="adapt-height-to-content">
+    <h2 class="navigation-title">Restaurateurs</h2>
+    <div class="border-only-alignment">
+      <div class="border-only"></div>
+    </div>
+    <div class="restaurateur-navigator">
+      <div>
+        <h3 class="restaurateur-title-nav rest-title-nav1">Formation personnel</h3>
+        <div class="restaurateur-content-nav-1">
+          <p>HOPPYZ vous accompagne pour sélectionner les bières qui s'accorderont au mieux à votre cuisine.</p>
+        </div>
+      </div>
+      <div>
+        <h3 class="restaurateur-title-nav rest-title-nav2">Carte de bière</h3>
+        <div class="restaurateur-content-nav-1">
+          <p>A fin de pouvoir conseiller au mieux vos clients, nous vous proposons une formation à la dégustation.</p>
+        </div>
+      </div>
+      <div>
+        <h3 class="restaurateur-title-nav rest-title-nav3">Formation cycle complet</h3>
+        <div class="restaurateur-content-nav-1">
+          <p>A fin de pouvoir conseiller au mieux vos clients, nous vous proposons une formation à la dégustation.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="groupes" class="adapt-height-to-content">
+    <h2 class="navigation-title">JUSTE POUR GAGNER DE L4ESPACE EN DDDESSOUS</h2>
+    <div class="border-only-alignment">
+      <div class="border-only"></div>
+    </div>
+    <div class="container">
+      <h3 class="subtitle">ATELIERS A LA DEMANDE</h3>
+      <p>Atelier dégustation (35€/p)</p>
+      <p>Atelier bière & mets (45€/p)</p>
+      <p>Menu bière & mets (65€/p)</p>
+      <%= link_to  "More details", ateliers_path, :class => 'learn-more' %>
+    </div>
+  </div>
+
 
 
   <div class="cup">
