@@ -14,6 +14,7 @@ gem 'webpacker', '~> 5.x'
 gem 'font-awesome-sass', '~> 5.6.1'
 
 gem 'mail_form'
+gem 'dotenv', '~> 2.1', '>= 2.1.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.3'
