@@ -1,0 +1,39 @@
+#restaurateurs {
+    z-index: 1;
+    overflow: auto;
+    height: 800px;
+    .restaurateur-navigator {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        div {
+            width: 100%;
+        }
+        .restaurateur-title-nav {
+            position: relative;
+            padding: 20px 0;
+            font-weight: 400;
+            margin: 0;
+            text-align: center;
+            width: 100%;
+            background-color: rgba(153, 156, 87, 0.6);
+            color: #232323;
+        }
+        .rest-title-nav1::after,
+        .rest-title-nav2::after,
+        .rest-title-nav3::after {
+            position: absolute;
+            content: url('triangle-down.png');
+            top: 81%;
+            left: 50%;
+            transform: translate(-50%, 0);
+            opacity: 0.6;
+        }
+        div>div>p {
+            text-align: center;
+            margin: 0;
+            padding: 30px 20px;
+        }
+    }
+}
