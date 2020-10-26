@@ -1,6 +1,5 @@
 class AteliersController < ApplicationController
 
-  before_action :allow_only_admin
 
   def index
     @ateliers = Atelier.all
@@ -45,14 +44,8 @@ class AteliersController < ApplicationController
 
   private
 
-  def allow_only_admin
-    unless current_user
-      redirect_to restricted_url_path
-    end
-  end
-
   def atelier_params
-    params.require(:atelier).permit(:title, :description, :title)
+    params.require(:atelier).permit(:title, :description, :price)
   end
 
 end

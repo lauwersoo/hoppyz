@@ -17,6 +17,9 @@
 @import "components/beer_background";
 @import "components/titles";
 @import "components/footer";
+@import "components/variables";
+@import "components/agenda";
+@import "components/social_medias";
 // Your pages
 @import "pages/index";
 @import "pages/accueil";
@@ -25,3 +28,4 @@
 @import "pages/brasseurs";
 @import "pages/restaurateurs";
 @import "pages/contact";
+@import "pages/ateliers";
