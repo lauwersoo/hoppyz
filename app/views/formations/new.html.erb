@@ -6,6 +6,7 @@
   <%= simple_form_for [@user, @formation] do |f| %>
     <%= f.error_notification %>
     <%= f.input :title, label: 'Titre de la formation', error: 'Un titre est obligatoire afin de créer la formation' %>
+    <%= f.input :date, label: 'Date de la formation', error: 'Une date est obligatoire afin de créer la formation' %>
     <%= f.input :price, label: 'Prix de la formation', error: 'Un prix est obligatoire afin de créer la formation' %>
     <%= f.input :description, label: 'Description de la formation', error: 'Une description est obligatoire afin de créer la formation' %>
     <%= f.button :submit, 'Créer' %>
