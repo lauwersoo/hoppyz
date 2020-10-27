@@ -39,9 +39,10 @@
       <p>Malheureusement, aucun atelier n'est prévu dans les prochaines semaines.<br>Reviens vite nous voir pour rester à jour!</p>
     <% else %>
       <% @ateliers.each do |a| %>
-        <%= link_to atelier_path(a.id), class: "atelier-path" do %>
-          <div class="atelier" data-aos="left" data-aos-duration="1500">
+        <%= link_to atelier_path(a.id), class: "link get-clickable" do %>
+          <div class="atelier">
             <h3 class="title"><%= a.title %></h3>
+            <p class="date"><%= a.date %></p>
             <p class="description"><%= a.description %></p>
             <p class="price"><%= a.price %> €</p>
           </div>
