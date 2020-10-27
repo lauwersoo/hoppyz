@@ -1,20 +1,57 @@
-<h1>Mes formations</h1>
+<% if current_user %>
 
-<% if @formations.count == 0 %>
-  <p>Il n'y a pas de formations</p>
-<% else %>
-  <% @formations.each do |f| %>
-    <ul>
-      <li><p>Titre : <%= f.title %></p></li>
-      <p>Prix : <%= f.price %> €</p>
-      <p>Description : <%= f.description %></p>
-      <p><%= link_to  "supprimer définitivement", formation_path(f), method: :delete %> - Retirer du site</p>
+  <h1>Mes formations</h1>
 
-    </ul>
+  <% if @formations.count == 0 %>
+    <p>Il n'y a pas de formations</p>
+  <% else %>
+    <% @formations.each do |f| %>
+      <ul>
+        <li><p>Titre : <%= f.title %></p></li>
+        <p>Date : <%= f.date %></p>
+        <p>Prix : <%= f.price %> €</p>
+        <p>Description : <%= f.description %></p>
+        <p><%= link_to  "supprimer définitivement", formation_path(f), method: :delete %> - Retirer du site</p>
+
+      </ul>
+    <% end %>
   <% end %>
+
+
+  <br>
+
+  <%= link_to  "menu", admin_platform_path %>
+
+<% else %>
+
+  <%# USER PART HERE %>
+
+  <div class="events-index" class="adapt-height-to-content">
+    <h2>Les formations</h2>
+    <div class="border-only-alignment">
+      <div class="border-only"></div>
+    </div>
+    <div class="introduction">
+      <p>Les formations ont été conçus afin de permettre à tout un chacun d'apprendre à déguster les bonnes bières avec le bon repas.<br>Grâce aux activités ludiques créées par notre zytologiste, vous apprendrez, pendant deux heures, à déguster et à connaitre de délicieuses bières.</p>
+    </div>
+    <div class="border-only-alignment">
+      <div class="border-only"></div>
+    </div>
+    <% if @formations.count == 0 %>
+      <p>Malheureusement, aucune formation n'est prévu dans les prochaines semaines.<br>Reviens vite nous voir pour rester à jour!</p>
+    <% else %>
+      <% @formations.each do |f| %>
+        <%= link_to formation_path(f.id), class: "link get-clickable" do %>
+          <div class="event">
+            <h3 class="title"><%= f.title %></h3>
+            <p class="date"><%= f.date %></p>
+            <p class="description"><%= f.description %></p>
+            <p class="price"><%= f.price %> €</p>
+          </div>
+        <% end %>
+      <% end %>
+    <% end %>
+
+  </div>
+
 <% end %>
-
-
-<br>
-
-<%= link_to  "menu", admin_platform_path %>

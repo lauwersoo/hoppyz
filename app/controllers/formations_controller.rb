@@ -1,6 +1,6 @@
 class FormationsController < ApplicationController
 
-  before_action :allow_only_admin
+  # before_action :allow_only_admin
 
   def index
     @formations = Formation.all
@@ -54,7 +54,7 @@ class FormationsController < ApplicationController
   end
 
   def formation_params
-    params.require(:formation).permit(:title, :description, :price)
+    params.require(:formation).permit(:title, :date, :description, :price)
   end
 
 end
