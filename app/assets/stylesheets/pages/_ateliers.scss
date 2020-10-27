@@ -1,4 +1,4 @@
-#ateliers-index {
+.events-index {
     z-index: 1;
     height: auto;
     max-height: min-content;
@@ -15,10 +15,10 @@
         width: 90%;
         margin: 10px auto;
     }
-    .atelier-path {
-        text-decoration: none;
+    .get-clickable {
+        z-index: 1000;
     }
-    .atelier {
+    .event {
         padding: 20px;
         width: 90%;
         background-color: rgba(153, 156, 87, 0.1);
@@ -32,7 +32,8 @@
         p {
             margin: 0;
         }
-        .description {
+        .description,
+        .date {
             margin: 10px 0;
         }
         .price {
