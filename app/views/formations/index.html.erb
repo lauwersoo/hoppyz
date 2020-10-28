@@ -38,7 +38,7 @@
       <div class="border-only"></div>
     </div>
     <% if @formations.count == 0 %>
-      <p>Malheureusement, aucune formation n'est prévu dans les prochaines semaines.<br>Reviens vite nous voir pour rester à jour!</p>
+      <p class="text-align">Malheureusement, aucune formation n'est prévu dans les prochaines semaines.<br>Reviens vite nous voir pour rester à jour!</p>
     <% else %>
       <% @formations.each do |f| %>
         <%= link_to formation_path(f.id), class: "link get-clickable" do %>

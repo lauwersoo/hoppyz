@@ -37,7 +37,7 @@
       <div class="border-only"></div>
     </div>
     <% if @ateliers.count == 0 %>
-      <p>Malheureusement, aucun atelier n'est prévu dans les prochaines semaines.<br>Reviens vite nous voir pour rester à jour!</p>
+      <p class="text-align">Malheureusement, aucun atelier n'est prévu dans les prochaines semaines.<br>Reviens vite nous voir pour rester à jour!</p>
     <% else %>
       <% @ateliers.each do |a| %>
         <%= link_to atelier_path(a.id), class: "link get-clickable" do %>
