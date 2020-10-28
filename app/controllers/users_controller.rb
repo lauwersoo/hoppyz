@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :allow_only_admin
+  # before_action :allow_only_admin
 
   def show
     @user = User.find(params[:id])
