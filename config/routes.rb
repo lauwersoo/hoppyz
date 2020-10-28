@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   get "admin-platform", to: "pages#admin_platform"
 
-  get "restricted-url", to: "pages#restricted_area"
+  # get "restricted-url", to: "pages#restricted_area"
 
   resources :users
 

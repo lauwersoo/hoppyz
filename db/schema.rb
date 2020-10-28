@@ -12,13 +12,16 @@
 
 ActiveRecord::Schema.define(version: 2020_10_27_104818) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "ateliers", force: :cascade do |t|
     t.string "title"
     t.string "description"
     t.integer "price"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "user_id"
+    t.bigint "user_id"
     t.datetime "date"
     t.index ["user_id"], name: "index_ateliers_on_user_id"
   end
@@ -29,7 +32,7 @@ ActiveRecord::Schema.define(version: 2020_10_27_104818) do
     t.integer "price"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "user_id"
+    t.bigint "user_id"
     t.index ["user_id"], name: "index_boxes_on_user_id"
   end
 
@@ -39,7 +42,7 @@ ActiveRecord::Schema.define(version: 2020_10_27_104818) do
     t.integer "price"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "user_id"
+    t.bigint "user_id"
     t.datetime "date"
     t.index ["user_id"], name: "index_formations_on_user_id"
   end
