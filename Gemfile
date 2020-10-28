@@ -17,6 +17,7 @@ gem 'font-awesome-sass', '~> 5.6.1'
 #mail form
 gem 'mail_form'
 gem 'dotenv', '~> 2.1', '>= 2.1.1'
+gem 'sendgrid-ruby'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
