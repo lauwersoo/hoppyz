@@ -22,15 +22,15 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
-
 import { backToTop } from "./back_to_top"
 import { beerScrolling } from "./beer_scrolling"
 
-// if (document.querySelector(".back-to-top-anchor")) {
-backToTop();
-// }
-beerScrolling();
-
+if (document.getElementById("back-to-top-anchor")) {
+    backToTop();
+}
+if (document.querySelector(".cup")) {
+    beerScrolling();
+}
 
 // javascript on scroll animations
 AOS.init();

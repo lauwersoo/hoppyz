@@ -166,28 +166,35 @@
     </div>
     <div class="contact-form">
       <div class="container">
-        <h3>Coming soon</h3>
-        <%= form_for @contact do |f| %>
+        <%= form_for @contact, :html => {:class => 'new-contact-form'} do |f| %>
           <% if flash[:error].present? %>
               <p> flash[:error]</p>
           <% end %>
-          <%= f.label :name %> <br>
-          <%= f.text_field :name, required: true %>
 
-          <br>
-          <%= f.label :email %> <br>
-          <%= f.text_field :email, required: true %>
+          <div class="form-content">
+            <%= f.label :name %>
+            <%= f.text_field :name, required: true %>
+          </div>
 
-          <br>
-          <%= f.label :message %> <br>
-          <%= f.text_area :message, as: :text %>
+          <div class="form-content">
+            <%= f.label :email %>
+            <%= f.text_field :email, required: true %>
+          </div>
 
+          <div class="form-content message">
+            <%= f.label :message %>
+            <%= f.text_area :message, class: 'text_area', as: :text %>
+          </div>
 
-          <%= f.label :nickname %> <br>
-          <%= f.text_field :nickname, hint: 'leave this field blank' %>
+          <div class="form-content nickname">
+            <%= f.label :nickname %>
+            <%= f.text_field :nickname, hint: 'leave this field blank' %>
+          </div>
 
+          <div class="submit-button">
+            <%= f.submit 'Send Message', class: "button" %>
+          </div>
 
-          <%= f.submit 'Send Message', class: "button" %>
         <% end %>
       </div>
     </div>
