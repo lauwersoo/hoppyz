@@ -1,0 +1,34 @@
+#contact {
+    .contact-form {
+        .new-contact-form {
+            display: flex;
+            flex-direction: column;
+            label {
+                margin: 0;
+                margin-bottom: 8px;
+            }
+            .form-content {
+                margin-bottom: 20px;
+                display: flex;
+                flex-direction: column;
+                label::after {
+                    content: ' *'
+                }
+            }
+            .message {
+                .text_area {
+                    height: 200px;
+                }
+            }
+            .nickname {
+                display: none;
+            }
+            .submit-button {
+                display: flex;
+                justify-content: center;
+                margin-top: 15px;
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
